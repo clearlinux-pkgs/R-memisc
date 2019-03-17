@@ -4,13 +4,13 @@
 #
 Name     : R-memisc
 Version  : 0.99.14.12
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/memisc_0.99.14.12.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/memisc_0.99.14.12.tar.gz
 Summary  : Management of Survey Data and Presentation of Analysis Results
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-memisc-lib
+Requires: R-memisc-lib = %{version}-%{release}
 BuildRequires : R-evaluate
 BuildRequires : R-repr
 BuildRequires : R-stringi
@@ -40,11 +40,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1538498674
+export SOURCE_DATE_EPOCH=1552810119
 
 %install
+export SOURCE_DATE_EPOCH=1552810119
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1538498674
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -79,8 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library memisc|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  memisc || :
 
 
 %files
@@ -122,7 +121,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/memisc/help/paths.rds
 /usr/lib64/R/library/memisc/html/00Index.html
 /usr/lib64/R/library/memisc/html/R.css
-/usr/lib64/R/library/memisc/libs/symbols.rds
 
 %files lib
 %defattr(-,root,root,-)
