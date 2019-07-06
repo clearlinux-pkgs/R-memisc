@@ -4,7 +4,7 @@
 #
 Name     : R-memisc
 Version  : 0.99.17.2
-Release  : 25
+Release  : 26
 URL      : https://cran.r-project.org/src/contrib/memisc_0.99.17.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/memisc_0.99.17.2.tar.gz
 Summary  : Management of Survey Data and Presentation of Analysis Results
