@@ -4,7 +4,7 @@
 #
 Name     : R-memisc
 Version  : 0.99.17.2
-Release  : 27
+Release  : 28
 URL      : https://cran.r-project.org/src/contrib/memisc_0.99.17.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/memisc_0.99.17.2.tar.gz
 Summary  : Management of Survey Data and Presentation of Analysis Results
@@ -14,6 +14,7 @@ Requires: R-memisc-lib = %{version}-%{release}
 Requires: R-repr
 BuildRequires : R-repr
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 value labels, definable missing values, recoding of variables,
@@ -39,10 +40,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562203745
+export SOURCE_DATE_EPOCH=1571864660
 
 %install
-export SOURCE_DATE_EPOCH=1562203745
+export SOURCE_DATE_EPOCH=1571864660
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
