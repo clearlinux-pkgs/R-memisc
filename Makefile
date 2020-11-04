@@ -1,5 +1,5 @@
 PKG_NAME := R-memisc
-URL = https://cran.r-project.org/src/contrib/memisc_0.99.25.6.tar.gz
+URL = https://cran.r-project.org/src/contrib/memisc_0.99.27.2.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
